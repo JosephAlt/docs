@@ -9,6 +9,7 @@ const pathRegExps = [
     .map((language) => new RegExp(`^/${language.code}(/.*)?$`, 'i')),
 
   // Disallow indexing of WIP products
+  //disallowing indexing of WIP
   ...Object.values(productMap)
     .filter((product) => product.wip || product.hidden)
     .map((product) => [
